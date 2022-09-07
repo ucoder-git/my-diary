@@ -22,11 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD
-# 개인정보
-config.js
-=======
-# private
-/firebase
 
->>>>>>> aae7fa0e43e36034446cb6fa455bd78c0ceb5dae
+# 개인정보
+.env
