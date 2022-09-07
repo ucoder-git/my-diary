@@ -27,7 +27,7 @@ export default function Signup() {
 
         <form className={styles.signup_form} onSubmit={handleSubmit} >
             <fieldset>
-                <legend>가입하기</legend>
+                <legend>회원가입</legend>
 
                 <label htmlFor="myEmail">email : </label>
                 <input type="email" id="myEmail" required onChange={handleData} value={email} />
