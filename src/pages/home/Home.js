@@ -4,8 +4,9 @@ import React, { Component }  from 'react';
 
 export default function Home() {
     return (
-        <div>
-            HOME
-        </div>
+        <main className={styles.cont}>
+        <aside className={styles.side_menu}></aside>
+
+        </main>
     )
 }

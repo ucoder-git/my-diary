@@ -28,17 +28,13 @@ export const useSignup = () => {
                     throw new Error('회원가입에 실패했습니다.');
                 }
 
-                // 회원가입이 완료되고 유저 정보에 닉네임을 업데이트합니다. import 받아야합니다.
-                updateProfile(appAuth.currentUser, { displayName })
-                    .then(() => {
-                        dispatch({ type: 'login', payload: user });
-                        setError(null);
-                        setIsPending(false);
-                    }).catch((err) => {
-                        setError(err.message);
-                        setIsPending(false)
-                        console.log(err.message);
-                    });
+// 프로필을 업데이트하는 함수에 dispatch 함수를 실행하여 우리가 만들었던 authReducer 함수를 호출합니다.
+        updateProfile(appAuth.currentUser, { displayName })
+            .then(() => {
+                dispatch({ type: 'login', payload: user });
+                setError(null);
+                setIsPending(false);
+            })
             })
             .catch((err) => {
                 setError(err.message);
