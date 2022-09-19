@@ -21,10 +21,10 @@ function App() {
 <Route path="/" element={user ? <Home /> : <Navigate replace={true} to="/login" />}></Route>
 {/* 로그인이 되어있다면 로그인 화면이나 회원가입 화면으로 가지 못하게 만듭니다. */}
 <Route path="/login" element={!user ? <Login /> : <Navigate to="/" replace={true} />}></Route>
-<Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" replace={true} />}></Route>        
+<Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" replace={true} />}></Route>
 </Routes>
       </BrowserRouter>
-    ):"loading..."}
+    ) :"loading..."}
     </div>
   );
 }
